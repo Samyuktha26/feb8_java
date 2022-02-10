@@ -1,0 +1,41 @@
+import java.util.*;
+
+class Calculator1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.println();
+            System.out.println("enter two integers");
+            int n1 = sc.nextInt();
+            int n2 = sc.nextInt();
+            int result = 0;
+            System.out.println("choose an operator: +,-,*,/,%");
+            char c = sc.next().charAt(0);
+            switch (c) {
+                case '+': {
+                    result = n1 + n2;
+                    System.out.println("addition" + ": " + result);
+                    // System.out.println("Select an operator: + , - , * , / , %");
+                    break;
+                }
+                case '-':
+                    result = n1 - n2;
+                    System.out.println("subtraction" + ":" + result);
+                    break;
+
+                case '*':
+                    result = n1 * n2;
+                    System.out.println("multiplication" + ":" + result);
+                    break;
+                case '/':
+                    result = n1 / n2;
+                    System.out.println("division" + " " + result);
+                    break;
+                case '%':
+                    result = n1 % n2;
+                    System.out.println("modulo" + " " + result);
+                    break;
+            }
+        }
+    }
+}
